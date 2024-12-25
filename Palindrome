@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class reverse {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n,temp,res=0,revers=0;
+        System.out.print("enter a number : ");
+        n=sc.nextInt();
+        temp=n;
+        while (temp!=0){
+            res=temp%10;
+            revers=revers*10+res;
+            temp/=10;
+        }
+
+        if(revers==n)
+            System.out.println(n+" is a Palindrome");
+        else
+            System.out.println(n+" is not a Palindrome");
+    }
+}
